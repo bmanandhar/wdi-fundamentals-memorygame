@@ -28,11 +28,10 @@ var cards = [
 var cardsInPlay = [];
 
  function checkForMatch() {
-  //if (cardsInPlay.length == 2) {
     if (cardsInPlay[0] === cardsInPlay[1]) {
           alert("You found a match!");
-          //setTimeout('location', 50000);
-        //location.reload()
+          setTimeout('location', 50000);
+          //location.reload()
 
       } else {
           alert("Sorry, try again");
@@ -42,15 +41,11 @@ var cardsInPlay = [];
 
 
 function flipCard() {
-    var cardId = this.getAttribute('data-id');
- //console.log("User flipped" + cards[cardId].rank);
+  var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
  this.setAttribute('src', cards[cardId].cardImage);
-//console.log(cards[cardId].suit);
  if (cardsInPlay.length === 2){
     checkForMatch();
-    //cardsInPlay = [];
-
  };
 };
 
