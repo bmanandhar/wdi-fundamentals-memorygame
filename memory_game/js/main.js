@@ -39,7 +39,6 @@ var cardsInPlay = [];
 
   };
 
-
 function flipCard() {
   var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
@@ -52,7 +51,7 @@ function flipCard() {
 console.log(cardsInPlay);
 
 
- function createBoard() {
+function createBoard() {
   const cardTable = document.getElementById('game-board');
   for (var i = 0; i < cards.length; i++) {
   var cardElement = document.createElement('img');
