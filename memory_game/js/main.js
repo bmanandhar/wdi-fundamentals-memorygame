@@ -27,23 +27,23 @@ var cards = [
 
 var cardsInPlay = [];
 
- function checkForMatch() {
-    if (cardsInPlay[0] === cardsInPlay[1]) {
-          alert("You found a match!");
-          setTimeout('location', 50000);
-          //location.reload()
+function checkForMatch() {
+  if (cardsInPlay[0] === cardsInPlay[1]) {
+    alert("You found a match!");
+    setTimeout('location', 50000);
+    //location.reload()
 
-      } else {
-          alert("Sorry, try again");
-        };
+  } else {
+      alert("Sorry, try again");
+    };
 
   };
 
 function flipCard() {
   var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
- this.setAttribute('src', cards[cardId].cardImage);
- if (cardsInPlay.length === 2){
+  this.setAttribute('src', cards[cardId].cardImage);
+  if (cardsInPlay.length === 2){
     checkForMatch();
  };
 };
